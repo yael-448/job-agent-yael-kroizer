@@ -1,18 +1,20 @@
 """Interactive chat with either version: python SDK/main.py --chat
 
 State lives in results/state_chat_<impl>/ and is NOT wiped, so the agent remembers
-you between chats. Hebrew is reordered for terminals that do not render
-right-to-left text (most Windows consoles show it mirrored).
+you between chats. VS Code's terminal renders Hebrew correctly; for a console that
+shows it mirrored, set JOB_AGENT_BIDI=1 to reorder it.
 """
+import os
 import sys
 
 from .runner import ROOT
 
-try:
-    from bidi import get_display
-except ImportError:  # optional dependency
-    def get_display(text: str) -> str:
+
+def get_display(text: str) -> str:
+    if os.environ.get("JOB_AGENT_BIDI") != "1":
         return text
+    from bidi import get_display as reorder
+    return reorder(text)
 
 
 def show(text: str) -> None:
