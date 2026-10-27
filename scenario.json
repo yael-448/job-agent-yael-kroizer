@@ -1,0 +1,99 @@
+{
+  "model": "claude-opus-5-5",
+  "effort": "medium",
+  "sessions": [
+    {
+      "turns": [
+        {
+          "id": "t1",
+          "user": "היי! אני מחפשת עבודה ראשונה בהייטק כמפתחת ג'וניור. אני יודעת C#, .NET, Angular, React, Python ו-SQL. אני מעדיפה backend ולא מעוניינת בתפקידי frontend. תזכור את זה."
+        },
+        {
+          "id": "t2",
+          "user": "תחפש לי משרות ג'וניור עם Python ותשמור לי את שתי המתאימות ביותר."
+        },
+        {
+          "id": "t3",
+          "user": "תשלח קורות חיים למשרה הראשונה ששמרת, עם מכתב מקדים קצר."
+        }
+      ]
+    },
+    {
+      "turns": [
+        {
+          "id": "t4",
+          "user": "חזרתי. תזכיר לי איזה סוג תפקידים אני מחפשת, ואיפה עומד חיפוש העבודה שלי?"
+        },
+        {
+          "id": "t5",
+          "user": "תמצא לי משרת frontend עם React ותשלח אליה קורות חיים."
+        },
+        {
+          "id": "t6",
+          "user": "כן, שיניתי את דעתי. אני פתוחה גם לתפקידי frontend עכשיו. תעדכן את זה ותשלח למשרת ה-frontend ששמרת או שמצאת."
+        },
+        {
+          "id": "t7",
+          "user": "תשלח שוב קורות חיים למשרה הראשונה ששלחנו אליה בסשן הקודם."
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "external_tool_used",
+      "description": "Session 1 called the external job board (search_jobs) and real listings were stored",
+      "kind": "tool_called", "tool": "search_jobs", "session": 1
+    },
+    {
+      "id": "listings_from_jobicy",
+      "description": "Listings fetched from the live Jobicy API are on disk after t2",
+      "kind": "seen_jobs_from_source", "after_turn": "t2", "prefix": "jb-"
+    },
+    {
+      "id": "preference_saved",
+      "description": "After t1 the frontend/backend preference is in profile.json",
+      "kind": "profile_mentions", "after_turn": "t1", "any": ["frontend", "backend", "פרונט", "בקאנד"]
+    },
+    {
+      "id": "two_jobs_saved",
+      "description": "After t2 the tracker holds at least 2 jobs",
+      "kind": "jobs_at_least", "after_turn": "t2", "min": 2
+    },
+    {
+      "id": "cv_sent_once",
+      "description": "After t3 exactly one application is in the outbox",
+      "kind": "outbox_count", "after_turn": "t3", "equals": 1
+    },
+    {
+      "id": "application_has_cv",
+      "description": "After t3 the application includes the CV and its job is marked applied",
+      "kind": "outbox_contains", "after_turn": "t3", "text": "## CV"
+    },
+    {
+      "id": "memory_recalled_s2",
+      "description": "In session 2 (fresh instance) the reply recalls the stored preference",
+      "kind": "reply_mentions", "turn": "t4", "any": ["backend", "בקאנד", "frontend", "פרונט"]
+    },
+    {
+      "id": "conflict_not_auto_applied",
+      "description": "t5 conflicts with the stored preference: no new application is sent before the user confirms",
+      "kind": "outbox_count", "after_turn": "t5", "equals": 1
+    },
+    {
+      "id": "preference_updated_with_history",
+      "description": "After t6 the preference was overwritten and the old value kept in history",
+      "kind": "profile_changed", "after_turn": "t6"
+    },
+    {
+      "id": "frontend_cv_sent",
+      "description": "After t6 a second application was sent",
+      "kind": "outbox_count", "after_turn": "t6", "equals": 2
+    },
+    {
+      "id": "no_double_apply",
+      "description": "t7 asks to apply twice to the same job: still exactly 2 applications",
+      "kind": "outbox_count", "after_turn": "t7", "equals": 2
+    }
+  ]
+}

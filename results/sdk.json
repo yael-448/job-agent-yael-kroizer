@@ -1,0 +1,346 @@
+{
+  "impl": "sdk",
+  "model": "claude-opus-5-5",
+  "effort": "medium",
+  "turns": [
+    {
+      "reply": "שמרתי בזיכרון:\n- **כישורים:** C#, .NET, Angular, React, Python, SQL\n- **העדפה:** תפקידי backend\n- **לא רלוונטי:** תפקידי frontend\n- **מטרה:** עבודה ראשונה בהייטק כמפתחת ג'וניור בישראל\n\nלחפש לך עכשיו משרות backend לג'וניורים, למשל ב-C#/.NET או ב-Python?",
+      "tokens": {
+        "input": 4,
+        "cache_read": 2613,
+        "cache_write": 3298,
+        "output": 636
+      },
+      "model_calls": 2,
+      "tools_called": [
+        "remember",
+        "remember",
+        "remember",
+        "remember"
+      ],
+      "cost_usd": 0.03995,
+      "seconds": 9.46,
+      "id": "t1",
+      "session": 1,
+      "user": "היי! אני מחפשת עבודה ראשונה בהייטק כמפתחת ג'וניור. אני יודעת C#, .NET, Angular, React, Python ו-SQL. אני מעדיפה backend ולא מעוניינת בתפקידי frontend. תזכור את זה.",
+      "state": {
+        "jobs": {},
+        "outbox": [],
+        "profile": {
+          "career_goal": "Looking for first hi-tech job as a junior developer in Israel",
+          "excluded_roles": "Not interested in frontend roles",
+          "preferred_roles": "Backend roles preferred",
+          "skills": "C#, .NET, Angular, React, Python, SQL"
+        }
+      }
+    },
+    {
+      "reply": "שמרתי את שתי המשרות שהכי מתאימות לך:\n\n1. **jb-149552**: Software Engineer - App Stores ב-Canonical. משרה מרחוק מכל מקום, כלומר פתוחה גם לישראל, וממוקדת ב-backend.\n2. **jb-156997**: Linux Software Engineer - Ubuntu for Next-Gen Silicon ב-Canonical. גם היא מרחוק מכל מקום, וגייסו אליה בכמה רמות ניסיון, כולל ג'וניור.\n\nרוב המשרות האחרות שמצאתי פתוחות רק למועמדים במדינות מסוימות כמו ארה\"ב, קנדה או אירופה. דילגתי גם על משרות Full Stack, כי יש בהן חלק של frontend.\n\nרוצה שאשלח מועמדות לאחת מהן?",
+      "tokens": {
+        "input": 10,
+        "cache_read": 15078,
+        "cache_write": 1743,
+        "output": 941
+      },
+      "model_calls": 4,
+      "tools_called": [
+        "search_jobs",
+        "search_jobs",
+        "save_job",
+        "save_job"
+      ],
+      "cost_usd": 0.03582,
+      "seconds": 13.82,
+      "id": "t2",
+      "session": 1,
+      "user": "תחפש לי משרות ג'וניור עם Python ותשמור לי את שתי המתאימות ביותר.",
+      "state": {
+        "jobs": {
+          "jb-149552": "saved",
+          "jb-156997": "saved"
+        },
+        "outbox": [],
+        "profile": {
+          "career_goal": "Looking for first hi-tech job as a junior developer in Israel",
+          "excluded_roles": "Not interested in frontend roles",
+          "preferred_roles": "Backend roles preferred",
+          "skills": "C#, .NET, Angular, React, Python, SQL"
+        }
+      }
+    },
+    {
+      "reply": "שלחתי את המועמדות שלך ל-**jb-149552** (Software Engineer - App Stores ב-Canonical), עם קורות החיים ומכתב מקדים באנגלית. הסטטוס שלה בטבלת המעקב עכשיו \"הוגשה\".\n\nהמכתב מדגיש את מה שהכי רלוונטי ל-backend:\n- RESTful APIs עם הרשאות לפי תפקידים ב-C#/.NET, מהפרקטיקום במשרד החינוך\n- מחולל הפרויקטים שכתבת ב-Python\n- פרויקט ה-Microservices שלך עם Docker, RabbitMQ, Redis ו-CI/CD\n\nלשלוח מועמדות גם ל-**jb-156997**?",
+      "tokens": {
+        "input": 8,
+        "cache_read": 17710,
+        "cache_write": 2658,
+        "output": 690
+      },
+      "model_calls": 3,
+      "tools_called": [
+        "read_cv",
+        "apply_to_job"
+      ],
+      "cost_usd": 0.03864,
+      "seconds": 9.6,
+      "id": "t3",
+      "session": 1,
+      "user": "תשלח קורות חיים למשרה הראשונה ששמרת, עם מכתב מקדים קצר.",
+      "state": {
+        "jobs": {
+          "jb-149552": "applied",
+          "jb-156997": "saved"
+        },
+        "outbox": [
+          "jb-149552.md"
+        ],
+        "profile": {
+          "career_goal": "Looking for first hi-tech job as a junior developer in Israel",
+          "excluded_roles": "Not interested in frontend roles",
+          "preferred_roles": "Backend roles preferred",
+          "skills": "C#, .NET, Angular, React, Python, SQL"
+        }
+      }
+    },
+    {
+      "reply": "ברוכה השבה! 👋\n\n**מה את מחפשת:** עבודה ראשונה בהייטק כמפתחת ג'וניור בישראל. את מעדיפה backend, ותפקידי frontend לא מעניינים אותך. הכישורים שלך: C#, .NET, Angular, React, Python ו-SQL.\n\n**איפה עומד החיפוש:**\n- **jb-149552**: Software Engineer - App Stores ב-Canonical. **שלחת מועמדות.**\n- **jb-156997**: Linux Software Engineer - Ubuntu for Next-Gen Silicon ב-Canonical. **שמורה, עוד לא שלחת מועמדות.**\n\nרוצה לשלוח מועמדות גם ל-jb-156997, או שאחפש עוד משרות backend, למשל ב-C#/.NET?",
+      "tokens": {
+        "input": 6,
+        "cache_read": 15964,
+        "cache_write": 721,
+        "output": 331
+      },
+      "model_calls": 2,
+      "tools_called": [
+        "list_jobs"
+      ],
+      "cost_usd": 0.0156,
+      "seconds": 8.52,
+      "id": "t4",
+      "session": 2,
+      "user": "חזרתי. תזכיר לי איזה סוג תפקידים אני מחפשת, ואיפה עומד חיפוש העבודה שלי?",
+      "state": {
+        "jobs": {
+          "jb-149552": "applied",
+          "jb-156997": "saved"
+        },
+        "outbox": [
+          "jb-149552.md"
+        ],
+        "profile": {
+          "career_goal": "Looking for first hi-tech job as a junior developer in Israel",
+          "excluded_roles": "Not interested in frontend roles",
+          "preferred_roles": "Backend roles preferred",
+          "skills": "C#, .NET, Angular, React, Python, SQL"
+        }
+      }
+    },
+    {
+      "reply": "שמת לב שזה סותר את מה שביקשת ממני לזכור? אמרת שתפקידי frontend לא מעניינים אותך ושאת מעדיפה backend.\n\nאז לפני שאני שולחת קורות חיים, מה מתאים לך?\n1. **שינית את דעתך.** אעדכן בזיכרון שגם תפקידי frontend רלוונטיים לך, ואחפש משרות React ואשלח מועמדות.\n2. **רק הפעם, כחריג.** אחפש ואשלח מועמדות למשרה אחת, וההעדפה ל-backend תישאר כמו שהיא.\n3. **ביטול.** נמשיך לחפש רק backend.",
+      "tokens": {
+        "input": 4,
+        "cache_read": 8420,
+        "cache_write": 327,
+        "output": 395
+      },
+      "model_calls": 1,
+      "tools_called": [],
+      "cost_usd": 0.01222,
+      "seconds": 6.14,
+      "id": "t5",
+      "session": 2,
+      "user": "תמצא לי משרת frontend עם React ותשלח אליה קורות חיים.",
+      "state": {
+        "jobs": {
+          "jb-149552": "applied",
+          "jb-156997": "saved"
+        },
+        "outbox": [
+          "jb-149552.md"
+        ],
+        "profile": {
+          "career_goal": "Looking for first hi-tech job as a junior developer in Israel",
+          "excluded_roles": "Not interested in frontend roles",
+          "preferred_roles": "Backend roles preferred",
+          "skills": "C#, .NET, Angular, React, Python, SQL"
+        }
+      }
+    },
+    {
+      "reply": "עדכנתי בזיכרון שאת פתוחה עכשיו גם לתפקידי frontend וגם ל-backend.\n\nעדיין לא היו לך משרות frontend שמורות, אז חיפשתי חדשות. רוב משרות ה-React שמצאתי פתוחות רק למועמדים במדינות מסוימות כמו ארה\"ב או פורטוגל. מצאתי משרה אחת שפתוחה גם לישראל, שמרתי אותה ושלחתי אליה מועמדות:\n\n- **jb-149527**: Web Frontend Engineer (JS, CSS, React, Flutter) ב-Canonical. משרה מרחוק מכל מקום.\n\nשלחתי אליה את קורות החיים עם מכתב מקדים באנגלית. המכתב מדגיש את הניסיון שלך ב-React, Angular ו-TypeScript, את התאמת ממשקים לעיצובי Figma בפרקטיקום ואת מערכת ה-Full Stack שבנית.\n\n**המצב עכשיו:** שלחת מועמדות ל-2 משרות (jb-149552 ו-jb-149527), ומשרה אחת עוד שמורה (jb-156997).",
+      "tokens": {
+        "input": 10,
+        "cache_read": 38235,
+        "cache_write": 1851,
+        "output": 1254
+      },
+      "model_calls": 4,
+      "tools_called": [
+        "remember",
+        "remember",
+        "search_jobs",
+        "save_job",
+        "apply_to_job"
+      ],
+      "cost_usd": 0.04757,
+      "seconds": 15.31,
+      "id": "t6",
+      "session": 2,
+      "user": "כן, שיניתי את דעתי. אני פתוחה גם לתפקידי frontend עכשיו. תעדכן את זה ותשלח למשרת ה-frontend ששמרת או שמצאת.",
+      "state": {
+        "jobs": {
+          "jb-149527": "applied",
+          "jb-149552": "applied",
+          "jb-156997": "saved"
+        },
+        "outbox": [
+          "jb-149527.md",
+          "jb-149552.md"
+        ],
+        "profile": {
+          "career_goal": "Looking for first hi-tech job as a junior developer in Israel",
+          "excluded_roles": "None - now open to frontend roles too (changed mind)",
+          "preferred_roles": "Backend and frontend roles (open to both)",
+          "skills": "C#, .NET, Angular, React, Python, SQL"
+        }
+      }
+    },
+    {
+      "reply": "כבר שלחת מועמדות ל-**jb-149552** (Software Engineer - App Stores ב-Canonical), והסטטוס שלה \"הוגשה\". לא אשלח אליה שוב, כי אותה מועמדות פעמיים עלולה להיראות לא מקצועית, וגם המערכת לא מאפשרת זאת.\n\nאם יש לך גרסה מעודכנת של קורות החיים או משהו שרצית להוסיף, עדיף לחכות לתשובה. אפשר גם לפנות לחברה ישירות.\n\nרוצה שאשלח בינתיים מועמדות למשרה השמורה **jb-156997**?",
+      "tokens": {
+        "input": 4,
+        "cache_read": 10598,
+        "cache_write": 464,
+        "output": 256
+      },
+      "model_calls": 1,
+      "tools_called": [],
+      "cost_usd": 0.01097,
+      "seconds": 4.89,
+      "id": "t7",
+      "session": 2,
+      "user": "תשלח שוב קורות חיים למשרה הראשונה ששלחנו אליה בסשן הקודם.",
+      "state": {
+        "jobs": {
+          "jb-149527": "applied",
+          "jb-149552": "applied",
+          "jb-156997": "saved"
+        },
+        "outbox": [
+          "jb-149527.md",
+          "jb-149552.md"
+        ],
+        "profile": {
+          "career_goal": "Looking for first hi-tech job as a junior developer in Israel",
+          "excluded_roles": "None - now open to frontend roles too (changed mind)",
+          "preferred_roles": "Backend and frontend roles (open to both)",
+          "skills": "C#, .NET, Angular, React, Python, SQL"
+        }
+      }
+    }
+  ],
+  "totals": {
+    "input": 46,
+    "cache_read": 108618,
+    "cache_write": 11062,
+    "output": 4503,
+    "cache_hit_pct": 90.7,
+    "model_calls": 17,
+    "cost_usd": 0.2008,
+    "seconds": 67.7
+  },
+  "checks": [
+    {
+      "id": "external_tool_used",
+      "description": "Session 1 called the external job board (search_jobs) and real listings were stored",
+      "passed": true,
+      "detail": "tools in session 1: ['apply_to_job', 'read_cv', 'remember', 'save_job', 'search_jobs']"
+    },
+    {
+      "id": "listings_from_jobicy",
+      "description": "Listings fetched from the live Jobicy API are on disk after t2",
+      "passed": true,
+      "detail": "11 listings fetched"
+    },
+    {
+      "id": "preference_saved",
+      "description": "After t1 the frontend/backend preference is in profile.json",
+      "passed": true,
+      "detail": "matched ['frontend', 'backend']"
+    },
+    {
+      "id": "two_jobs_saved",
+      "description": "After t2 the tracker holds at least 2 jobs",
+      "passed": true,
+      "detail": "2 jobs in tracker"
+    },
+    {
+      "id": "cv_sent_once",
+      "description": "After t3 exactly one application is in the outbox",
+      "passed": true,
+      "detail": "outbox: ['jb-149552.md']"
+    },
+    {
+      "id": "application_has_cv",
+      "description": "After t3 the application includes the CV and its job is marked applied",
+      "passed": true,
+      "detail": "applied jobs ['jb-149552']"
+    },
+    {
+      "id": "memory_recalled_s2",
+      "description": "In session 2 (fresh instance) the reply recalls the stored preference",
+      "passed": true,
+      "detail": "matched ['backend', 'frontend']"
+    },
+    {
+      "id": "conflict_not_auto_applied",
+      "description": "t5 conflicts with the stored preference: no new application is sent before the user confirms",
+      "passed": true,
+      "detail": "outbox: ['jb-149552.md']"
+    },
+    {
+      "id": "preference_updated_with_history",
+      "description": "After t6 the preference was overwritten and the old value kept in history",
+      "passed": true,
+      "detail": "entries with history: ['excluded_roles', 'preferred_roles']"
+    },
+    {
+      "id": "frontend_cv_sent",
+      "description": "After t6 a second application was sent",
+      "passed": true,
+      "detail": "outbox: ['jb-149527.md', 'jb-149552.md']"
+    },
+    {
+      "id": "no_double_apply",
+      "description": "t7 asks to apply twice to the same job: still exactly 2 applications",
+      "passed": true,
+      "detail": "outbox: ['jb-149527.md', 'jb-149552.md']"
+    }
+  ],
+  "checks_passed": "11/11",
+  "loc": {
+    "api_harness": {
+      "caching": 13,
+      "compaction": 18,
+      "context": 13,
+      "history": 39,
+      "loop": 22,
+      "memory": 23,
+      "tokens": 34,
+      "tools": 33
+    },
+    "api_harness_total": 195,
+    "sdk_replaces": {
+      "history": 3,
+      "context": 1,
+      "tools": 8,
+      "memory": 7,
+      "compaction": 1,
+      "caching": 1,
+      "loop": 2,
+      "tokens": 7
+    },
+    "sdk_total": 114,
+    "shared_total": 428
+  }
+}

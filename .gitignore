@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.pytest_cache/
+shared/.cache/
+results/state_*/
+shared/data/cv.md
+results/sdk_run.log
